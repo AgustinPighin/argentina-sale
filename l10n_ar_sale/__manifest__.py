@@ -1,9 +1,9 @@
 {
     'name': 'Argentinian Sale Total Fields',
-    'version': '13.0.1.11.0',
+    'version': '13.0.1.12.08',
     'category': 'Localization/Argentina',
     'sequence': 14,
-    'author': 'ADHOC SA',
+    'author': 'ADHOC SA, Agustin Pighin',
     'website': 'www.adhoc.com.ar',
     'license': 'AGPL-3',
     'summary': '',

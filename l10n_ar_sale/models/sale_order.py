@@ -25,6 +25,16 @@ class SaleOrder(models.Model):
         states={'draft': [('readonly', False)], 'sent': [('readonly', False)]},
     )
 
+#Modificacion Agustin Pighin     
+    print_currency_id         = fields.Many2one("res.currency",  string="Currency", readonly=True, required=True,compute='_get_currency')
+
+    def _get_currency(self):
+        self.ensure_one()
+        """en header amount_tax/amount_total/amount_untaxed/currency_rate"""
+        print_currency_id  =  self.env['res.currency'].search([('name', '=', 'ARS')], limit=1)[0]        
+        self.print_currency_id  = print_currency_id 
+#Modificacion Agustin Pighin   
+
     @api.depends(
         'partner_id.l10n_ar_afip_responsibility_type_id',
         'company_id.partner_id.l10n_ar_afip_responsibility_type_id',)
