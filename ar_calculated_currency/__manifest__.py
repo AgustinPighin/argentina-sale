@@ -1,6 +1,6 @@
 {
     'name': 'Add currency calculation sale order',
-    'version': '13.0.0.0.21',
+    'version': '13.0.0.0.23',
     'category': 'Localization/Argentina',
     'sequence': 14,
     'author': 'Agustin Pighin',

@@ -12,7 +12,7 @@ _logger = logging.getLogger(__name__)
 class SaleOrderLine(models.Model):
     _inherit = "sale.order.line"
 
-    price_unit_ars = fields.Float('Precio Unitario en Ars', compute='_compute_prices_ars', inverse='_inverse_compute_prices_ars', store=True, tracking=True, default=0.0)
+    price_unit_ars = fields.Float('Precio Un. ARS', compute='_compute_prices_ars', inverse='_inverse_compute_prices_ars', store=True, tracking=True, default=0.0)
 
     @api.depends('price_unit')
     def _compute_prices_ars(self):
